@@ -1,3 +1,9 @@
+ 
+   .logo {
+    
+    width: 40%;
+    height: 40%;
+ }
 *{
     margin: 0px;
     padding: 0px;
@@ -142,20 +148,9 @@ ul{
     color: #014dd5;
 
   }
-.logo{
-    color:#122853;
-    font-weight: 700;
-    font-size: 1.4rem;
-}
-.logo span{
-    background-color: #014dd5;
-    color: #ffffff;
-    padding: 0px 5px;
-    border-radius: 5px;
-    font-weight: 600;
-    margin-right: 5px;
-}
+
 .menu{
+
     display: flex;
     justify-content: center;
     align-items: center;
@@ -163,6 +158,7 @@ ul{
     margin-left: 40px;
 }
 .menu li a{
+    margin-left: 40px;
     margin: 0px 20px;
     color: #303030;
     font-weight: 500;
@@ -872,6 +868,7 @@ footer{
         margin-top: 0px;
     }
 }
+
 @media(max-width:950px){
     .navigation{
         justify-content: space-between;
@@ -880,14 +877,7 @@ footer{
         width: 100%;
         padding: 20px;
     }
-    .logo,
-    .nav-appointment-btn{
-        z-index: 103;
-    }
-    .logo{
-        margin-right: auto;
-        margin-left: 20px;
-    }
+   
     .navigation .menu{
         display: none;
         position: absolute;
