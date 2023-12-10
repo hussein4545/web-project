@@ -46,33 +46,40 @@ var swiperServices = new Swiper(".mySwiperservices", {
     },
 });
 
-/*--team--*/
-var swiperTeam = new Swiper(".mySwiperteam", {
-    slidesPerView: 1,
-    spaceBetween: 10,
-    pagination: {
-        el: ".swiper-pagination",
-        clickable: true,
-    },
-    breakpoints: {
-        560: {
-            slidesPerView: 2,
-            spaceBetween: 20,
-        },
-        950: {
-            slidesPerView: 3,
-            spaceBetween: 40,
-        },
-        1250: {
-            slidesPerView: 4,
-            spaceBetween: 40,
-        },
-    },
-});
 
 /*--testimonials--*/
 var swiperTesti = new Swiper(".mySwipertesti", {
     pagination: {
         el: ".swiper-pagination",
     },
+});
+document.addEventListener('DOMContentLoaded', function () {
+    var mySwiper = new Swiper('.mySwiperteam', {
+        slidesPerView: 3,
+        spaceBetween: 30,
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
+        pagination: {
+            el: '.swiper-pagination',
+            clickable: true,
+        },
+    });
+});
+document.addEventListener('DOMContentLoaded', function () {
+    const appointmentForm = document.getElementById('appointmentForm');
+
+    appointmentForm.addEventListener('submit', function (event) {
+        event.preventDefault();
+
+        // Add your logic to handle form submission
+        // You can access form fields using: 
+        // const fullName = document.getElementById('fullName').value;
+        // const email = document.getElementById('email').value;
+        // const doctor = document.getElementById('doctor').value;
+        // const appointmentDate = document.getElementById('appointmentDate').value;
+
+        // Perform necessary actions (e.g., send data to server, show confirmation)
+    });
 });
