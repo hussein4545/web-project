@@ -41,9 +41,9 @@
             </ul>
             <!--**contact*******-->
 			
-            <a href="appointment.html" class="nav-appointment-btn">Appointment</a><br>
+		<button onclick="showapp(event)" class="nav-appointment-btn">Appointment</button>
 
-			<button onclick="showLogin(event)">Login</button>
+			
         </nav><!--nav-end-->
         <!--==Content============================-->
         <div class="hero-content">
@@ -151,39 +151,46 @@
         
     </section><!--story-end-->
 
-    		 <!--========login-overlay==========-->
+    		 <!--========appointment-overlay==========-->
+	<div class="overlay" id="app-overlay">
+<div class="appointment-wrapper"> <br>
+
+        <!-- Corrected form id to match script.js -->
+        
+        <button class="remove" onclick="remove()">
 	
-	<div class="overlay" id="loginOverlay">
-
-                <div class="container">
-
-                        <button class="remove" onclick="remove()">X</button>
-
-                    <form>
-                        <h2>Login</h2>
-                        <input type="text" placeholder="Email or username">
-                        <input type="password" placeholder="Password">
-
-                        <button type="submit">Login</button>
-                        <p>New to We Care?<button onclick="showregistration(event)">signup</button></p>
-                    </form>
-
-                </div></div>
-                <div class="overlay" id="registrationOverlay">
-                <div class="container">
-                    <button class="remove" onclick="remove()">X</button>
-                <form>
-                <h2>Signup</h2>
-                <input type="text" placeholder="Username">
-                <input type="text" placeholder="Email">
-                <input type="password" placeholder="Password">
-
-                <button type="submit">Signup</button>
-                 <p>Already on We Care? <button onclick="showLogin(event)">login</button></p>
-            </form>
-            </div></div>
+		<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="30" height="30" fill="none" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" >
+  <line x1="5" y1="19" x2="19" y2="5"></line>
+  <line x1="5" y1="5" x2="19" y2="19"></line>
+</svg>
 
 	
+	</button>
+      
+      <form class="appointment-form" id="appointment-form">
+		  	<h1>Make an Appointment</h1><br>
+        <label for="fullName">Full Name:</label>
+            <input type="text" id="fullName" name="fullName" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="doctor">Select a Doctor:</label>
+            <select name="doctor" id="doctor" required>
+                <option value="" disabled selected>Select a Doctor</option>
+                <option value="Dr. Paradox Alex">Dr. Paradox Alex</option>
+                <option value="Dr. Another Specialist">Dr. Another Specialist</option>
+                <option value="Dr. Third Specialist">Dr. Third Specialist</option>
+                <!-- Add more doctors as needed -->
+            </select>
+
+            <label for="appointmentDate">Appointment Date:</label>
+            <input type="date" id="appointmentDate" name="appointmentDate" required>
+
+            <button type="submit">Submit Appointment</button>
+        </form>
+    </div>
+	</div>
 	
 	
 

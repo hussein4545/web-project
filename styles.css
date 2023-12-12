@@ -5,6 +5,7 @@
    
     width: 20%;
  }
+
 *{
     margin: 0px;
     padding: 0px;
@@ -39,6 +40,7 @@ ul{
   ::-webkit-scrollbar-thumb:hover {
     background: #1b1b1b; 
   }
+/*==top========================*/
 /*==hero========================*/
 #hero{
     min-height: 600px;
@@ -60,13 +62,14 @@ ul{
 	margin-left: 10px;
 	padding: 10px;
 	border-radius: 4px;
-	text-decoration: underline;
 }
 .navigation button:hover{
-	background-color: #014dd5;
+	background-color: dodgerblue;
 	color: white;
+	cursor: pointer;
 }
 .overlay{
+	z-index: 100;
   position: fixed;
   top: 50%; 
   left: 50%; 
@@ -77,59 +80,16 @@ ul{
   border-radius: 8vh;
 }
 
-.container {
-  width: 50vh;
-  display: flex;
-  justify-content: space-between;
-  padding: 2vh;
-  background-color: #fff;
- margin: auto;
-
- border-radius: 1vh;
-}
-
-.container form {
-  width: 100%;
-  padding: 20px;
-}
-
-.container form h2 {
-  text-align: center;
-  margin-bottom: 20px;
-}
-
-.container form input {
-  width: 100%;
-  padding: 10px;
-  margin-bottom: 20px;
-  border: 1px solid #ccc;
-  outline: none;
-}
-
-.container form button {
-  width: 100%;
-  padding: 10px;
-  border: none;
-  border-radius: 5px;
-  background-color: #394876;
-  color: #fff;
-  cursor: pointer;
-}
-
-.container form button:hover {
-  background-color: #014dd5;
-}
-
 .remove{
   position: absolute;
     margin: auto;
-    margin-left: 42vh; 
+    margin-left:48vh; 
     background-color: white;
     border-style: none;
 }
-.remove:hover{
+.remove svg:hover{
   background-color: white;
-  color: red;
+ 	stroke: red;
 }
 .container p{
   margin-top: 2vh;
@@ -149,6 +109,7 @@ ul{
     color: #014dd5;
 
   }
+
 
 .menu{
 
@@ -501,6 +462,7 @@ ul{
     margin-top: 30px;
 }
 .s-box1 i{
+	z-index: 0;
     background-color: #d4e2ff;
 }
 .s-box2 i{
@@ -756,10 +718,6 @@ ul{
     letter-spacing: 0.3px;
     margin-top: 30px;
 }
-.swiper-pagination{
-  margin-top: -30rem;
-}
-
 /*==footer================================*/
 footer{
     width: 100%;
@@ -847,6 +805,8 @@ footer{
     max-width: 1200px;
     width: 90%;
     margin: 80px auto;
+	margin-bottom: 30vh;
+	
 }
 
 .our-team-heading {
@@ -939,22 +899,25 @@ body {
 }
 
 .appointment-wrapper {
-    background-color: #fff;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    max-width: 600px;
-    margin: 80px auto;
+    width: 55vh;
+  display: flex;
+  justify-content: space-between;
+  padding: 2vh;
+  background-color: #fff;
+ margin: auto;
+
+ border-radius: 1vh;
 }
 
 .appointment-wrapper h1 {
     text-align: center;
-    color: #333;
+  margin-bottom: 20px;
+	
 }
 
 .appointment-form {
-    display: flex;
-    flex-direction: column;
+      width: 50vh;
+  padding: 20px;
 }
 
 .appointment-form label {
@@ -962,34 +925,52 @@ body {
     color: #333;
 }
 
-.appointment-form input,
+.appointment-form input{
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  outline: none;
+}
 .appointment-form select {
-    padding: 10px;
-    margin-bottom: 16px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
+    width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  outline: none;
+	
 }
 
 .appointment-form button {
-    background-color: #4caf50;
+    background-color: #014dd5;
     color: #fff;
     padding: 12px;
     border: none;
     border-radius: 4px;
     cursor: pointer;
     font-size: 16px;
+	width: 100%;
 }
 
 .appointment-form button:hover {
-    background-color: #45a049;
+    background-color: dodgerblue;
 }
-
+.footerp2{
+	margin-top: 37vh;
+}
 
 /*==making-responsive====================*/
 .menu-icon,
 .menu-btn{
     display: none;
 }
+.swiper-pagination-bullet {
+    width: 10px; /* Adjust the width of each bullet */
+    height: 10px; /* Adjust the height of each bullet */
+    margin: 0 5px; /* Adjust the space between bullets */
+    background-color: dodgerblue; /* Set the background color of bullets */
+}
+
 @media(max-width:1200px){
     .footer-container{
         display: grid;

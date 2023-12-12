@@ -1,29 +1,18 @@
 // script.js
-function showLogin(event) {
+function showapp(event) {
    event.preventDefault();
-   var loginOverlay = document.getElementById("loginOverlay");
-   var registrationOverlay = document.getElementById("registrationOverlay");
+   var appoverlay= document.getElementById("app-overlay");
  
-   loginOverlay.style.display = "block";
-   registrationOverlay.style.display = "none";}
-
-function showregistration(event){
-  event.preventDefault();
-  var loginOverlay = document.getElementById("loginOverlay");
-  var registrationOverlay = document.getElementById("registrationOverlay");
-
-  loginOverlay.style.display = "none";
-  registrationOverlay.style.display = "block";
-
-
+	
+   appoverlay.style.display = "block";
 }
+
+
 function remove(){
-  var loginOverlay = document.getElementById("loginOverlay");
-  var registrationOverlay = document.getElementById("registrationOverlay");
-  loginOverlay.style.display = "none";
-  registrationOverlay.style.display = "none";
-
-
+   var appoverlay= document.getElementById("app-overlay");
+ 
+	
+   appoverlay.style.display = "none";
 
 }
 /*-services--*/
@@ -64,22 +53,40 @@ document.addEventListener('DOMContentLoaded', function () {
         pagination: {
             el: '.swiper-pagination',
             clickable: true,
+            dynamicBullets: true, // Enable dynamic bullets
+            spaceBetween: 10, // Adjust the space between bullets
         },
     });
 });
+
 document.addEventListener('DOMContentLoaded', function () {
-    const appointmentForm = document.getElementById('appointmentForm');
+  const form = document.getElementById('appointment-form');
 
-    appointmentForm.addEventListener('submit', function (event) {
-        event.preventDefault();
+  form.addEventListener('submit', async function (event) {
+    event.preventDefault();
 
-        // Add your logic to handle form submission
-        // You can access form fields using: 
-        // const fullName = document.getElementById('fullName').value;
-        // const email = document.getElementById('email').value;
-        // const doctor = document.getElementById('doctor').value;
-        // const appointmentDate = document.getElementById('appointmentDate').value;
-
-        // Perform necessary actions (e.g., send data to server, show confirmation)
+    const formData = new FormData(form);
+    const formObject = {};
+    formData.forEach((value, key) => {
+      formObject[key] = value;
     });
+
+    try {
+      const response = await fetch('http://localhost:3000/submit-appointment', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formObject),
+      });
+
+      const result = await response.json();
+      console.log(result);//debugging and verifying that the server is handling requests as expected.
+
+      // Optionally, reset the form after successful submission
+      form.reset();
+    } catch (error) {
+      console.error('Error submitting appointment:', error);
+    }
+  });
 });
