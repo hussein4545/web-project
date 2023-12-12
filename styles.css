@@ -40,7 +40,7 @@ ul{
   ::-webkit-scrollbar-thumb:hover {
     background: #1b1b1b; 
   }
-/*==top========================*/
+
 /*==hero========================*/
 #hero{
     min-height: 600px;
@@ -183,6 +183,32 @@ ul{
     display: flex;
     justify-content: flex-start;
     align-items: center;
+}.hero-text-btns button{
+    height: 45px;
+    padding: 0px 15px;
+    background-color: #122853;
+    color: #ffffff;
+    border-radius: 4px;
+    margin-right: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 0.9rem;
+    letter-spacing: 0.5px;
+    font-weight: 500;
+}
+.hero-text-btns button i{
+    width: 18px;
+    height: 18px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    background-color: #014dd5;
+    margin-right: 8px;
+    color: #ffffff;
+    font-size: 0.5rem;
+    padding-bottom: 1px;
 }
 .hero-text-btns a{
     height: 45px;
@@ -198,6 +224,7 @@ ul{
     letter-spacing: 0.5px;
     font-weight: 500;
 }
+
 .hero-text-btns a i{
     width: 18px;
     height: 18px;
@@ -958,7 +985,9 @@ body {
 .footerp2{
 	margin-top: 37vh;
 }
-
+.footerp3{
+	width: 100%;
+}
 /*==making-responsive====================*/
 .menu-icon,
 .menu-btn{
@@ -970,7 +999,67 @@ body {
     margin: 0 5px; /* Adjust the space between bullets */
     background-color: dodgerblue; /* Set the background color of bullets */
 }
+/*==our story====================*/
+.body-content {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    font-family: 'Poppins', sans-serif;
+}
 
+.body-content h1 {
+    color: #333;
+}
+
+.body-content p {
+    color: #666;
+    line-height: 1.6;
+}
+
+.body-content strong {
+    color: #000;
+}
+/* Photo Banner */
+/* styles.css */
+
+.photo-roll--container {
+  width: 100%;
+  overflow: hidden;
+  margin: 10px auto;
+}
+
+.photo-roll {
+  height: 233px;
+  width: 3500px; /* 10 images * 350px width */
+  margin-bottom: 5px;
+  font-size: 0;
+}
+
+.photo-roll img {
+  margin-bottom: 10px;
+  margin-right: 5px;
+  height: 233px;
+  width: 350px;
+  transition: all 0.5s ease;
+}
+
+.photo-roll img:hover {
+  transform: scale(1.2);
+  cursor: pointer;
+}
+
+.photo-roll img:first-child {
+  animation: bannermove 30s linear infinite;
+}
+
+@keyframes bannermove {
+  0% {
+    margin-left: 0;
+  }
+  100% {
+    margin-left: -2130px;
+  }
+}
 @media(max-width:1200px){
     .footer-container{
         display: grid;

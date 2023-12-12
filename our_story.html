@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Untitled Document</title>
+	
+    <!-- Add Your Custom Styles -->
+	<script src="script.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css" />
+    <!-- Font-Awesome-for-icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+</head>
+<body>
+    <section id="top">
+        <nav class="navigation">
+            <img src="fav-icon.png" class="logo" alt="Logo">
+            <!-- Menu -->
+            <ul class="menu">
+                <li><a href="index.html">home</a></li>
+                <li><a href="#our-services">Our Services</a></li>
+                <li><a href="#testimonials">Testimonial's</a></li>
+            </ul>
+            <!-- Contact -->
+            <button onclick="showapp(event)" class="nav-appointment-btn">Appointment</button>
+        </nav>
+    		 <!--========appointment-overlay==========-->
+	<div class="overlay" id="app-overlay">
+<div class="appointment-wrapper"> <br>
+
+        <!-- Corrected form id to match script.js -->
+        
+        <button class="remove" onclick="remove()">
+	
+		<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="30" height="30" fill="none" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" >
+  <line x1="5" y1="19" x2="19" y2="5"></line>
+  <line x1="5" y1="5" x2="19" y2="19"></line>
+</svg>
+
+	
+	</button>
+      
+      <form class="appointment-form" id="appointment-form">
+		  	<h1>Make an Appointment</h1><br>
+        <label for="fullName">Full Name:</label>
+            <input type="text" id="fullName" name="fullName" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="doctor">Select a Doctor:</label>
+            <select name="doctor" id="doctor" required>
+                <option value="" disabled selected>Select a Doctor</option>
+                <option value="Dr. Paradox Alex">Dr. Paradox Alex</option>
+                <option value="Dr. Another Specialist">Dr. Another Specialist</option>
+                <option value="Dr. Third Specialist">Dr. Third Specialist</option>
+                <!-- Add more doctors as needed -->
+            </select>
+
+            <label for="appointmentDate">Appointment Date:</label>
+            <input type="date" id="appointmentDate" name="appointmentDate" required>
+
+            <button type="submit">Submit Appointment</button>
+        </form>
+    </div>
+	</div>
+	
+	
+
+			
+	</section>	
+    <!-- Body Content -->
+<div class="body-content">
+        <h1>Welcome to Our Health Care Clinic in Zahle, Lebanon</h1>
+        <p>Our dedicated team of healthcare professionals is committed to your well-being, ensuring that you receive the highest standard of care. Whether you seek routine check-ups, specialized treatments, or expert advice, our clinic is your health partner.</p>
+    <p>At our clinic, we prioritize delivering the highest standard of care to every individual who entrusts us with their health journey.<br>
+      <br>
+    </p><br>
+	<div class="photo-roll--container">
+    <div class="photo-roll">
+      <img src="images/d5.png" alt="Photo 1">
+      <img src="images/d1.png" alt="Photo 3">
+	  <img src="images/CLINC1.jpg" alt="Photo 4">
+	  <img src="images/d2.png" alt="Photo 2">
+	  <img src="images/CLINIC2.jpg" alt="Photo 5">
+      <!-- ... (up to 10 images) -->
+    </div>
+<br>
+
+    <p><strong>Routine Check-ups:</strong> We understand the importance of proactive healthcare, and that's why we offer comprehensive routine check-ups. Our experienced healthcare providers conduct thorough assessments to detect and address potential health issues in their early stages, promoting preventive care and overall well-being.<br>
+<br>
+<br>
+</p>
+        <p><strong>Specialized Treatments:</strong> In our state-of-the-art facility, we provide a range of specialized treatments tailored to meet your unique healthcare needs. From cutting-edge medical interventions to personalized care plans, our team is dedicated to delivering effective and compassionate treatments for various medical conditions.<br>
+<br>
+<br>
+</p>
+        <p><strong>Expert Advice:</strong> Navigating the complexities of health and wellness can be overwhelming, but you're not alone. Our team of experts is here to offer guidance and expert advice. Whether you have questions about a specific condition, treatment options, or lifestyle choices that promote health, we're committed to providing the information you need to make informed decisions.<br>
+<br>
+<br>
+</p>
+        <p><strong>Your Health Partner:</strong> Consider our clinic your dedicated health partner on your journey to well-being. We prioritize building lasting relationships with our patients, fostering an environment of trust and collaboration. Our mission is to support you in achieving and maintaining optimal health, empowering you to lead a fulfilling and healthy life.<br>
+<br>
+<br>
+<br>
+</p>
+		<section id="dental">
+		<p><strong>Dental Care:</strong> Your oral health is a crucial component of your overall well-being. Our dental care services encompass routine dental check-ups, cleanings, and a range of dental treatments. Our experienced dentists are dedicated to helping you maintain a healthy and beautiful smile, providing personalized care to address your unique dental needs.<br><br>
+<br></p></section>
+		<section id="eye">
+		<p><strong>Eye Care:</strong> Vision is a precious gift, and our eye care services are designed to preserve and enhance it. Whether you need a routine eye exam, prescription glasses, or treatment for eye conditions, our skilled optometrists and ophthalmologists are here to ensure the health and clarity of your vision.<br><br>
+<br></p></section>
+		<section id="skin">
+		<p><strong>Skin Care:</strong> Achieving and maintaining healthy skin is essential for both physical health and confidence. Our dermatology services cover a wide range of skin care needs, from routine skin exams to the treatment of dermatological conditions. Our skincare experts are committed to helping you achieve and maintain radiant and healthy skin.<br><br>
+<br></p></section>	
+		<section id="surgical">
+		<p><strong>Surgical Interventions:</strong> For more complex healthcare needs, our clinic provides surgical interventions performed by skilled surgeons. From minor outpatient procedures to more extensive surgeries, we prioritize patient safety and positive outcomes, ensuring that you receive the highest quality surgical care.<br><br>
+<br></p>	</section>
+
+			
+      <p>At our clinic in Zahle, we believe that everyone deserves exceptional healthcare, and we strive to make that belief a reality for each individual we serve. Your health is our priority, and we look forward to being your trusted partner in care.</p>
+    </div>
+	
+   </div>
+</body>
+	<footer class="footerp3">
+               <div class="footer-container">
+            <!--**comoany-box**-->
+            <div class="footer-company-box">
+                <!--logo-->
+                <a href="#"><img src="fav-icon.png"   class="logof" alt="Logo"></a>
+                <!--details-->
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi quas neque repudiandae nihil.</p>
+                <!--social-box-->
+				<div class="footer-social">
+                    <a href="https://www.facebook.com/" target="_blank"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="https://www.instagram.com/mstfaelmasri/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="https://twitter.com/" target="_blank"><i class="fa-brands fa-twitter"></i></a>
+                    <a href="https://www.youtube.com/" target="_blank"><i class="fa-brands fa-youtube"></i></a>
+                </div>
+            </div>
+            <!--**link-box***-->
+            <div class="footer-link-box">
+                <strong>Main Link's</strong>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Contact</a></li>
+                    <li><a href="#">Services</a></li>
+                    <li><a href="#">Portfolio</a></li>
+                </ul>
+            </div>
+            <!--**link-box***-->
+            <div class="footer-link-box">
+                <strong>External Link's</strong>
+                <ul>
+                    <li><a href="#">Our Product's</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Disclaimer</a></li>
+                    <li><a href="#">Trem's and Condition's</a></li>
+                </ul>
+            </div>
+            <!--**link-box***-->
+            <div class="footer-link-box">
+                <strong>External Link's</strong>
+                <ul>
+                    <li><a href="#">Our Product's</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Disclaimer</a></li>
+                    <li><a href="#">Trem's and Condition's</a></li>
+                </ul>
+            </div>
+            
+   
+        </div>
+
+        <!--**bottom**********************-->
+        <div class="footer-bottom">
+            <span class="footer-owner">Made By Going-To Internet</span>
+            <span class="copyright">&#169; Copyright 2023 -  Going-To Internet</span>
+        </div>
+    </footer>
+</html>
