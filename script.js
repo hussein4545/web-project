@@ -6,6 +6,32 @@ function showapp(event) {
 	
    appoverlay.style.display = "block";
 }
+// Function to show the login overlay
+function showLogin() {
+    document.getElementById('login-overlay').style.display = 'flex';
+}
+
+// Function to hide the login overlay
+function removeLogin() {
+    document.getElementById('login-overlay').style.display = 'none';
+}
+
+// Handling login form submission
+document.getElementById('loginForm').addEventListener('submit', function(event) {
+    event.preventDefault(); // Prevent the default form submission
+
+    const username = document.getElementById('loginUsername').value;
+    const password = document.getElementById('loginPassword').value;
+
+    // Example validation
+    if (username === 'admin' && password === 'password') {
+        document.getElementById('loginMessage').textContent = 'Login successful!';
+        document.getElementById('loginMessage').style.color = 'green';
+        // Redirect or close the modal as needed
+    } else {
+        document.getElementById('loginMessage').textContent = 'Invalid username or password.';
+    }
+});
 
 
 function remove(){
