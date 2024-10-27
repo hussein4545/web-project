@@ -1,442 +1,306 @@
- <!--DOCTYPE html-->
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!--==title========================-->
     <title>Medical Website HTML</title>
-    <!--==Fav-icon=====================-->
     <link rel="shortcut icon" href="Images/fav-icon.png">
-    <!--==CSS==========================-->
     <link rel="stylesheet" href="styles.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-    <!--==Font-Awesome-for-icons=====-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
-    <!-- Link Swiper's CSS -->
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css"
-    />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css">
 
+    <!-- Login Modal -->
+    <div class="overlay" id="login-overlay">
+        <div class="login-wrapper">
+            <button class="remove" onclick="removeLogin()">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="30" height="30" fill="none" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="5" y1="19" x2="19" y2="5"></line>
+                    <line x1="5" y1="5" x2="19" y2="19"></line>
+                </svg>
+            </button>
+            <form id="loginForm">
+                <h1>Login</h1>
+                <label for="loginUsername">Username:</label>
+                <input type="text" id="loginUsername" name="username" required>
+                <label for="loginPassword">Password:</label>
+                <input type="password" id="loginPassword" name="password" required>
+                <button type="submit">Login</button>
+                <p id="loginMessage"></p>
+            </form>
+        </div>
+    </div>
 </head>
 <body>
     <section id="hero">
-
-        <!--==navigation====================-->
-		<nav class="navigation"><img src="Images/fav-icon.png"   class="logo" alt="Logo"></img> <!--**menu-btn*****-->
-   
-            <!--**menu*********-->
+        <nav class="navigation">
+            <img src="Images/fav-icon.png" class="logo" alt="Logo">
             <ul class="menu">
-                <li><a href="findadoctor.html" >Find A Doctor</a></li>
+                <li><a href="findadoctor.html">Find A Doctor</a></li>
                 <li><a href="#our-services">Our Services</a></li>
-                <li><a href="#testimonials">Testimonial's</a></li>
+                <li><a href="#testimonials">Testimonials</a></li>
             </ul>
-            <!--**contact*******-->
-			
-		<button onclick="showapp(event)" class="nav-appointment-btn">Appointment</button>
-
-			
-        </nav><!--nav-end-->
-        <!--==Content============================-->
+            <button onclick="showapp(event)" class="nav-appointment-btn">Appointment</button>
+        </nav>
         <div class="hero-content">
-            <!--**text****************-->
             <div class="hero-text">
                 <h1>Feel Better About Finding HealthCare</h1>
                 <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Id, vitae ex! Fuga similique repudiandae molestiae libero.</p>
-                <!--btns-->
                 <div class="hero-text-btns">
-                    <a href="findadoctor.html"><i class="fa-solid fa-magnifying-glass"></i> Find Doctor's</a>
-					<button onclick="showapp(event)"><i class="fa-solid fa-check"></i> Book Appointment</button>
+                    <a href="findadoctor.html"><i class="fa-solid fa-magnifying-glass"></i> Find Doctors</a>
+                    <button onclick="showapp(event)"><i class="fa-solid fa-check"></i> Book Appointment</button>
                 </div>
             </div>
-            <!--**img*****************-->
             <div class="hero-img">
-                <img alt="" src="images/main-bg.png">
+                <img alt="Healthcare Illustration" src="images/main-bg.png">
             </div>
-</div>
+        </div>
+    </section>
 
-        
-</section><!--hero-end-->
-
-
-
-    <!--==service-info===========================-->
     <section class="what-we-provide">
-
-        <!--**box1***********-->
         <div class="w-info-box w-i-box1">
-            <!--icon-->
             <div class="w-info-icon">
                 <i class="fa-solid fa-capsules"></i>
             </div>
-            <!--text-->
             <div class="w-info-text">
                 <strong>Specialised Service</strong>
-                <p>Lorem ipsum dolor sit </p>
+                <p>Lorem ipsum dolor sit</p>
             </div>
         </div>
-        <!--**box2***********-->
         <div class="w-info-box w-i-box2">
-            <!--icon-->
             <div class="w-info-icon">
                 <i class="fa-regular fa-comments"></i>
             </div>
-            <!--text-->
             <div class="w-info-text">
                 <strong>24/7 Advanced Care</strong>
-                <p>Lorem ipsum dolor sit </p>
+                <p>Lorem ipsum dolor sit</p>
             </div>
         </div>
-        <!--**box3***********-->
         <div class="w-info-box w-i-box3">
-            <!--icon-->
             <div class="w-info-icon">
                 <i class="fa-solid fa-square-poll-horizontal"></i>
             </div>
-            <!--text-->
             <div class="w-info-text">
                 <strong>Get Result Online</strong>
-                <p>Lorem ipsum dolor sit </p>
+                <p>Lorem ipsum dolor sit</p>
             </div>
         </div>
-    
-    </section><!--end-->
+    </section>
 
-
-
-    <!--==Story=============================-->
     <section id="our_story">
-
-        <!--**img**-->
         <div class="our-story-img">
-            <img src="Images/story_img.jpg" />
+            <img src="Images/story_img.jpg" alt="Our Clinic">
         </div>
-        <!--**text**-->
         <div class="our-stroy-text">
             <h2>Short Story About Our Clinic.</h2>
             <p>Our dedicated team of healthcare professionals is committed to your well-being, ensuring that you receive the highest standard of care. Whether you seek routine check-ups, specialized treatments, or expert advice, our clinic is your health partner.</p>
-            <p>Welcome to our health care oasis in Zahle, Lebanon, where our dedicated team of healthcare professionals is wholeheartedly committed to your well-being <a href="our_story.html">Read More</a></p>
-            <!--numbers-of-happy-patients-->
+            <p>Welcome to our health care oasis in Zahle, Lebanon, where our dedicated team of healthcare professionals is wholeheartedly committed to your well-being. <a href="our_story.html">Read More</a></p>
             <div class="story-numbers-container">
-                <!--box-->
                 <div class="story-numbers-box s-n-box1">
                     <strong>1000+</strong>
                     <span>Happy Patients</span>
                 </div>
-                <!--box-->
                 <div class="story-numbers-box s-n-box2">
                     <strong>215+</strong>
-                    <span>Expert Doctor</span>
+                    <span>Expert Doctors</span>
                 </div>
-                <!--box-->
                 <div class="story-numbers-box s-n-box3">
                     <strong>315+</strong>
-                    <span>Hospital Room's</span>
+                    <span>Hospital Rooms</span>
                 </div>
-                <!--box-->
                 <div class="story-numbers-box s-n-box4">
                     <strong>106+</strong>
-                    <span>Award Wining</span>
+                    <span>Award Winning</span>
                 </div>
             </div>
         </div>
-        
-    </section><!--story-end-->
+    </section>
 
-    		 <!--========appointment-overlay==========-->
-	<div class="overlay" id="app-overlay">
-<div class="appointment-wrapper"> <br>
-
-        <!-- Corrected form id to match script.js -->
-        
-        <button class="remove" onclick="remove()">
-	
-		<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="30" height="30" fill="none" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" >
-  <line x1="5" y1="19" x2="19" y2="5"></line>
-  <line x1="5" y1="5" x2="19" y2="19"></line>
-</svg>
-
-	
-	</button>
-      
-      <form class="appointment-form" id="appointment-form">
-		  	<h1>Make an Appointment</h1><br>
-        <label for="fullName">Full Name:</label>
-            <input type="text" id="fullName" name="fullName" required>
-
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email" required>
-
-            <label for="doctor">Select a Doctor:</label>
-            <select name="doctor" id="doctor" required>
-                <option value="" disabled selected>Select a Doctor</option>
-                <option value="Dr. Paradox Alex">Dr. Paradox Alex</option>
-                <option value="Dr. Another Specialist">Dr. Another Specialist</option>
-                <option value="Dr. Third Specialist">Dr. Third Specialist</option>
-                <!-- Add more doctors as needed -->
-            </select>
-
-            <label for="appointmentDate">Appointment Date:</label>
-            <input type="date" id="appointmentDate" name="appointmentDate" required>
-
-            <button type="submit">Submit Appointment</button>
-        </form>
+    <div class="overlay" id="app-overlay">
+        <div class="appointment-wrapper">
+            <button class="remove" onclick="remove()">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="30" height="30" fill="none" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="5" y1="19" x2="19" y2="5"></line>
+                    <line x1="5" y1="5" x2="19" y2="19"></line>
+                </svg>
+            </button>
+            <form class="appointment-form" id="appointment-form">
+                <h1>Make an Appointment</h1>
+                <label for="fullName">Full Name:</label>
+                <input type="text" id="fullName" name="fullName" required>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                <label for="doctor">Select a Doctor:</label>
+                <select name="doctor" id="doctor" required>
+                    <option value="" disabled selected>Select a Doctor</option>
+                    <option value="Dr. Paradox Alex">Dr. Paradox Alex</option>
+                    <option value="Dr. Another Specialist">Dr. Another Specialist</option>
+                    <option value="Dr. Third Specialist">Dr. Third Specialist</option>
+                </select>
+                <label for="appointmentDate">Appointment Date:</label>
+                <input type="date" id="appointmentDate" name="appointmentDate" required>
+                <button type="submit">Submit Appointment</button>
+            </form>
+        </div>
     </div>
-	</div>
-	
-	
 
-    <!--==Our-Services======================-->
     <section id="our-services">
-
-        <!--**heading********************-->
         <div class="services-heading">
-            <!--text-->
             <div class="services-heading-text">
                 <strong>Our Services</strong>
                 <h2>High Quality Services For You</h2>
             </div>
-            <!--btns-->
             <div class="service-slide-btns">
                 <div class="swiper-button-prev"></div>
                 <div class="swiper-button-next"></div>
             </div>
         </div>
-
-        <!--**container*******************-->
         <div class="services-box-container">
-
-             <!-- Swiper -->
             <div class="swiper mySwiperservices">
                 <div class="swiper-wrapper">
-                    <!--**1*******-->
                     <div class="swiper-slide">
-                    <!--**box1**-->
-                    <div class="service-box s-box1">
-                        <!--icon-->
-                        <i class="fa-solid fa-tooth"></i>
-                        <!--title-->
-                        <strong>Dental Care</strong>
-                        <!--details-->
-                        <p>Your oral health is a crucial component of your overall well-being.</p>
-                        <!--read more-->
-                        <a href="our_story.html#dental">Read More</a>
+                        <div class="service-box s-box1">
+                            <i class="fa-solid fa-tooth"></i>
+                            <strong>Dental Care</strong>
+                            <p>Your oral health is a crucial component of your overall well-being.</p>
+                            <a href="our_story.html#dental">Read More</a>
+                        </div>
                     </div>
-                    </div><!--slide-end-->
-                    <!--**1*******-->
                     <div class="swiper-slide">
-                    <!--**box1**-->
-                    <div class="service-box s-box2">
-                        <!--icon-->
-                        <i class="fa-solid fa-eye"></i>
-                        <!--title-->
-                        <strong>Eye Care</strong>
-                        <!--details-->
-                        <p>Vision is a precious gift, and our eye care services are designed to preserve and enhance it. </p>
-                        <!--read more-->
-                        <a href="our_story.html#eye">Read More</a>
+                        <div class="service-box s-box2">
+                            <i class="fa-solid fa-heart"></i>
+                            <strong>Cardiology</strong>
+                            <p>Heart care is vital for a healthy life; our experts are here to help.</p>
+                            <a href="our_story.html#cardiology">Read More</a>
+                        </div>
                     </div>
-                    </div><!--slide-end-->
-                    <!--**1*******-->
                     <div class="swiper-slide">
-                    <!--**box1**-->
-                    <div class="service-box s-box3">
-                        <!--icon-->
-                        <i class="fa-solid fa-face-smile"></i>
-                        <!--title-->
-                        <strong>Skin Care</strong>
-                        <!--details-->
-                        <p>Achieving and maintaining healthy skin is essential for both physical health and confidence</p>
-                        <!--read more-->
-                        <a href="our_story.html#skin">Read More</a>
+                        <div class="service-box s-box3">
+                            <i class="fa-solid fa-bone"></i>
+                            <strong>Orthopedics</strong>
+                            <p>From fractures to joint pain, we’ve got your orthopedic needs covered.</p>
+                            <a href="our_story.html#orthopedics">Read More</a>
+                        </div>
                     </div>
-                    </div><!--slide-end-->
-                    <!--**1*******-->
                     <div class="swiper-slide">
-                    <!--**box1**-->
-                    <div class="service-box s-box4">
-                        <!--icon-->
-                        <i class="fa-solid fa-user-doctor"></i>
-                        <!--title-->
-                        <strong>Surgical</strong>
-                        <!--details-->
-                        <p>Expert Surgical Interventions for Complex Healthcare Needs</p>
-                        <!--read more-->
-                        <a href="our_story.html#surgical">Read More</a>
+                        <div class="service-box s-box4">
+                            <i class="fa-solid fa-user-nurse"></i>
+                            <strong>Nursing Care</strong>
+                            <p>Compassionate nursing care tailored to your needs.</p>
+                            <a href="our_story.html#nursing">Read More</a>
+                        </div>
                     </div>
-                    </div><!--slide-end-->
-                </div><!--wrapper-end-->
-            </div><!--swiper-end-->
-
+                </div>
+                <div class="swiper-pagination"></div>
+            </div>
         </div>
+    </section>
 
-        <!--btn-->
-        <span class="service-btn">Contact Us For Need Any Help And Services <a href="#">Let's get Started</a></span>
-    
-    </section><!--services-end-->
-
-
-    <!--==Why-choose-us=======================-->
-    <section id="why-choose-us">
-
-        <!--**left*****************-->
-        <div class="why-choose-us-left">
-            <h3>Why Choose Us?</h3>
-            <!--==container====-->
-            <div class="why-choose-box-container">
-                <!--**box**-->
-                <div class="why-choose-box">
-                    <!--icon-->
-                    <i class="fa-solid fa-check"></i>
-                    <!--text-->
-                    <div class="why-choose-box-text">
-                        <strong>Advance Care</strong>
-                        <p>Lorem ipsum dolor sit</p>
+    <section id="testimonials">
+        <div class="testimonial-heading">
+            <strong>Testimonials</strong>
+            <h2>What Our Patients Say</h2>
+        </div>
+        <div class="swiper mySwiper">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <div class="testimonial-box">
+                        <p>"Great experience! The staff is very professional and caring. Highly recommend!"</p>
+                        <div class="patient-info">
+                            <img src="Images/patient1.jpg" alt="Patient 1">
+                            <h4>Patient 1</h4>
+                        </div>
                     </div>
                 </div>
-                <!--**box**-->
-                <div class="why-choose-box">
-                    <!--icon-->
-                    <i class="fa-solid fa-check"></i>
-                    <!--text-->
-                    <div class="why-choose-box-text">
-                        <strong>Online Medicine</strong>
-                        <p>Lorem ipsum dolor sit</p>
+                <div class="swiper-slide">
+                    <div class="testimonial-box">
+                        <p>"The best clinic I've ever visited. They truly care about their patients!"</p>
+                        <div class="patient-info">
+                            <img src="Images/patient2.jpg" alt="Patient 2">
+                            <h4>Patient 2</h4>
+                        </div>
                     </div>
                 </div>
-                <!--**box**-->
-                <div class="why-choose-box">
-                    <!--icon-->
-                    <i class="fa-solid fa-check"></i>
-                    <!--text-->
-                    <div class="why-choose-box-text">
-                        <strong>Medical & Surgical</strong>
-                        <p>Lorem ipsum dolor sit</p>
-                    </div>
-                </div>
-                <!--**box**-->
-                <div class="why-choose-box">
-                    <!--icon-->
-                    <i class="fa-solid fa-check"></i>
-                    <!--text-->
-                    <div class="why-choose-box-text">
-                        <strong>Lab Test's</strong>
-                        <p>Lorem ipsum dolor sit</p>
+                <div class="swiper-slide">
+                    <div class="testimonial-box">
+                        <p>"Amazing service and friendly staff. I felt so welcome!"</p>
+                        <div class="patient-info">
+                            <img src="Images/patient3.jpg" alt="Patient 3">
+                            <h4>Patient 3</h4>
+                        </div>
                     </div>
                 </div>
             </div>
-            <!--==btn========-->
-            <a href="#" class="why-choose-us-btn">Make Appointment</a>
-        </div><!--left-end-->
+            <div class="swiper-pagination"></div>
+        </div>
+    </section>
 
-        <!--**right*******************-->
-        <div class="why-choose-us-right">
-            <h3>Emergency?<br/>
-                Contact Us
-            </h3>
-            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Facilis iste, quam ratione rerum aliquid esse vero placeat? debitis velit cupiditate magni cumque corporis.</p>
-            <!--==container====-->
-            <div class="w-right-contact-container">
-                <!--**box**-->
-                <div class="w-right-contact-box">
-                    <i class="fa-solid fa-phone"></i>
-                    <!--text-->
-                    <div class="w-right-contact-box-text">
-                        <span>Call Us Now</span>
-                        <strong>+961 81 804 545</strong>
-                    </div>
-                </div>
-                <!--**box**-->
-                <div class="w-right-contact-box">
-                    <i class="fa-solid fa-envelope"></i>
-                    <!--text-->
-                    <div class="w-right-contact-box-text">
-                        <span>Mail Us</span>
-                        <strong>202211476@ua.edu.lb</strong>
-                    </div>
-                </div>
-            </div>
-        </div><!--right-end-->
-
-    </section><!--end-->
-
-
-
-
- 
     <footer>
-        <div class="footer-container">
-            <!--**comoany-box**-->
-            <div class="footer-company-box">
-                <!--logo-->
-                <a href="#"><img src="Images/fav-icon.png"   class="logof" alt="Logo"></a>
-                <!--details-->
-              <p>Use of We Care Services Since 2004 :A Growing Digital Divide.</p>
-                <!--social-box-->
-				<div class="footer-social">
-                    <a href="https://www.facebook.com/" target="_blank"><i class="fa-brands fa-facebook-f"></i></a>
-                    <a href="https://www.instagram.com/mstfaelmasri/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
-                    <a href="https://twitter.com/" target="_blank"><i class="fa-brands fa-twitter"></i></a>
-                    <a href="https://www.youtube.com/" target="_blank"><i class="fa-brands fa-youtube"></i></a>
-                </div>
+        <div class="footer-content">
+            <div class="footer-logo">
+                <img src="Images/fav-icon.png" alt="Footer Logo">
             </div>
-            <!--**link-box***-->
-            <div class="footer-link-box">
-                <strong>Main Link's</strong>
+            <div class="footer-links">
+                <h4>Quick Links</h4>
                 <ul>
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">About</a></li>
-                    <li><a href="#">Contact</a></li>
-                    <li><a href="#">Services</a></li>
-                    <li><a href="#">Portfolio</a></li>
+                    <li><a href="findadoctor.html">Find A Doctor</a></li>
+                    <li><a href="#our-services">Our Services</a></li>
+                    <li><a href="#testimonials">Testimonials</a></li>
                 </ul>
             </div>
-            <!--**link-box***-->
-            <div class="footer-link-box">
-                <strong>External Link's</strong>
+            <div class="footer-social">
+                <h4>Follow Us</h4>
                 <ul>
-                    <li><a href="#">Our Product's</a></li>
-                    <li><a href="#">Privacy Policy</a></li>
-                    <li><a href="#">Disclaimer</a></li>
-                    <li><a href="#">Trem's and Condition's</a></li>
+                    <li><a href="https://facebook.com"><i class="fa-brands fa-facebook"></i></a></li>
+                    <li><a href="https://twitter.com"><i class="fa-brands fa-twitter"></i></a></li>
+                    <li><a href="https://instagram.com"><i class="fa-brands fa-instagram"></i></a></li>
+                    <li><a href="https://linkedin.com"><i class="fa-brands fa-linkedin"></i></a></li>
                 </ul>
             </div>
-            <!--**link-box***-->
-            <div class="footer-link-box">
-                <strong>External Link's</strong>
-                <ul>
-                    <li><a href="#">Our Product's</a></li>
-                    <li><a href="#">Privacy Policy</a></li>
-                    <li><a href="#">Disclaimer</a></li>
-                    <li><a href="#">Trem's and Condition's</a></li>
-                </ul>
-            </div>
-            
-   
         </div>
-
-        <!--**bottom**********************-->
         <div class="footer-bottom">
-            <span class="footer-owner">Made By Going-To Internet</span>
-            <span class="copyright">&#169; Copyright 2023 -  Going-To Internet</span>
+            <p>&copy; 2024 Your Clinic Name. All Rights Reserved.</p>
         </div>
     </footer>
 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+    <script>
+        const swiperServices = new Swiper('.mySwiperservices', {
+            loop: true,
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+            },
+        });
 
+        const swiperTestimonials = new Swiper('.mySwiper', {
+            loop: true,
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+            },
+        });
 
-<!-- Swiper JS -->
-<script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+        function showapp(event) {
+            event.preventDefault();
+            document.getElementById('app-overlay').style.display = 'block';
+        }
 
-			<!-- Link to external JavaScript file -->
-<script src="script.js"></script>
+        function remove() {
+            document.getElementById('app-overlay').style.display = 'none';
+        }
 
-<!-- Initialize Swiper -->
-<script>
-		// Existing inline script (if any)
-		</script>
-		
-
+        function removeLogin() {
+            document.getElementById('login-overlay').style.display = 'none';
+        }
+    </script>
 </body>
 </html>
-   
